@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { Manrope, Poppins } from "next/font/google";
+import { Manrope, Montserrat } from "next/font/google";
 import "./globals.css";
 
-const poppins = Poppins({
-  weight: ["300", "400", "500", "600"],
-  variable: "--font-poppins",
+const montserrat = Montserrat({
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-montserrat",
   subsets: ["latin"],
 });
 
@@ -16,18 +16,18 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Adualys Therapeutics — Coming Soon",
-  description: "Adualys Therapeutics. Official website coming soon.",
+  title: "Adualys — Coming Soon",
+  description: "Adualys. Official website coming soon.",
   openGraph: {
-    title: "Adualys Therapeutics — Coming Soon",
+    title: "Adualys — Coming Soon",
     description: "Official website coming soon.",
     type: "website",
     images: [
       {
-        url: "/images/adualys-logo.png",
-        width: 401,
-        height: 147,
-        alt: "Adualys Therapeutics",
+        url: "/images/adualys-molecules.jpg",
+        width: 1920,
+        height: 1080,
+        alt: "Adualys",
       },
     ],
   },
@@ -42,9 +42,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${poppins.variable} ${manrope.variable} h-full antialiased`}
+      className={`${montserrat.variable} ${manrope.variable} h-full antialiased`}
     >
-      <body className="min-h-full bg-white text-[#070F3A] flex flex-col font-sans selection:bg-[#882694]/10 selection:text-[#070F3A]">
+      <body className="min-h-full bg-white text-[#070F3A] flex flex-col font-sans selection:bg-[#990099]/10 selection:text-[#070F3A]">
         {children}
       </body>
     </html>

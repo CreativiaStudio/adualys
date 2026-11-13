@@ -9,12 +9,12 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
-  --color-adualys-navy: #070f3a;
-  --color-adualys-purple: #882694;
-  --color-adualys-terracotta: #b85d66;
-  --color-adualys-bronze: #deac42;
-  --color-adualys-gold: #f2cc47;
+  --font-display: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+  --color-adualys-navy: #070F3A;
+  --color-adualys-purple: #990099;
+  --color-adualys-gold: #FFCC00;
+  --color-adualys-amber: #FEBF00;
+  --color-adualys-orange: #ED7D31;
 }
 
 body {
