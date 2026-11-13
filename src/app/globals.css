@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #070f3a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  --color-adualys-navy: #070f3a;
+  --color-adualys-purple: #882694;
+  --color-adualys-terracotta: #b85d66;
+  --color-adualys-bronze: #deac42;
+  --color-adualys-gold: #f2cc47;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+@keyframes adualys-aura {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes adualys-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes adualys-pulse-dot {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+.animate-aura {
+  animation: adualys-aura 14s ease-in-out infinite;
+}
+
+.animate-fade-up {
+  opacity: 0;
+  animation: adualys-fade-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-fade-up-delay {
+  opacity: 0;
+  animation: adualys-fade-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.25s forwards;
+}
+
+.animate-pulse-dot {
+  animation: adualys-pulse-dot 2.8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-aura,
+  .animate-fade-up,
+  .animate-fade-up-delay,
+  .animate-pulse-dot {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
